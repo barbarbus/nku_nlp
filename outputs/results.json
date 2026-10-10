@@ -1,0 +1,115 @@
+[
+  {
+    "method": "binary_bow",
+    "metrics": {
+      "accuracy": 0.9887152777777778,
+      "macro_f1": 0.9718092900732166
+    },
+    "details": {
+      "vocabulary_size": 65608,
+      "binary": true,
+      "classifier": "LogisticRegression"
+    }
+  },
+  {
+    "method": "word_frequency",
+    "metrics": {
+      "accuracy": 0.9913194444444444,
+      "macro_f1": 0.9788742160446473
+    },
+    "details": {
+      "vocabulary_size": 65608,
+      "binary": false,
+      "classifier": "LogisticRegression"
+    }
+  },
+  {
+    "method": "pretrained_glove",
+    "metrics": {
+      "accuracy": 0.9852430555555556,
+      "macro_f1": 0.9646170284241168
+    },
+    "details": {
+      "vector_size": 100,
+      "classifier": "LogisticRegression",
+      "train_coverage": {
+        "known_tokens": 5927277,
+        "total_tokens": 6037382,
+        "token_coverage": 0.9817627905605443,
+        "zero_vector_documents": 0
+      },
+      "test_coverage": {
+        "known_tokens": 756516,
+        "total_tokens": 770680,
+        "token_coverage": 0.9816214252348575,
+        "zero_vector_documents": 0
+      }
+    }
+  },
+  {
+    "method": "word2vec_ag_news",
+    "metrics": {
+      "accuracy": 0.9756944444444444,
+      "macro_f1": 0.9403282035957966
+    },
+    "details": {
+      "vector_size": 100,
+      "classifier": "LogisticRegression",
+      "train_coverage": {
+        "known_tokens": 5863201,
+        "total_tokens": 6037382,
+        "token_coverage": 0.971149581060135,
+        "zero_vector_documents": 0
+      },
+      "test_coverage": {
+        "known_tokens": 748370,
+        "total_tokens": 770680,
+        "token_coverage": 0.971051538900711,
+        "zero_vector_documents": 0
+      },
+      "word2vec_epochs": 10,
+      "word2vec_min_count": 2,
+      "word2vec_vocabulary_size": 37589
+    }
+  },
+  {
+    "method": "word2vec_nyt_train",
+    "metrics": {
+      "accuracy": 0.9852430555555556,
+      "macro_f1": 0.963472574290276
+    },
+    "details": {
+      "vector_size": 100,
+      "classifier": "LogisticRegression",
+      "train_coverage": {
+        "known_tokens": 6017859,
+        "total_tokens": 6037382,
+        "token_coverage": 0.9967663136107671,
+        "zero_vector_documents": 0
+      },
+      "test_coverage": {
+        "known_tokens": 764625,
+        "total_tokens": 770680,
+        "token_coverage": 0.9921433020189963,
+        "zero_vector_documents": 0
+      },
+      "word2vec_epochs": 10,
+      "word2vec_min_count": 2,
+      "word2vec_vocabulary_size": 46085
+    }
+  },
+  {
+    "method": "bert_base_uncased",
+    "metrics": {
+      "accuracy": 0.9817708333333334,
+      "macro_f1": 0.9601275958563837
+    },
+    "details": {
+      "model": "google-bert/bert-base-uncased",
+      "max_length": 64,
+      "epochs": 3,
+      "batch_size": 16,
+      "learning_rate": 2e-05
+    }
+  }
+]

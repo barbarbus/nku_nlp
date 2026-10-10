@@ -1,0 +1,7 @@
+method,accuracy,macro_f1
+binary_bow,0.988715,0.971809
+word_frequency,0.991319,0.978874
+pretrained_glove,0.985243,0.964617
+word2vec_ag_news,0.975694,0.940328
+word2vec_nyt_train,0.985243,0.963473
+bert_base_uncased,0.981771,0.960128
