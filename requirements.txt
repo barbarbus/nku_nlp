@@ -7,4 +7,5 @@ torch>=2.2,<3
 transformers>=4.41,<5
 datasets>=2.19,<5
 accelerate>=0.30,<2
+reportlab>=4.0,<5
 

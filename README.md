@@ -40,12 +40,12 @@ BERT 训练建议使用 CUDA GPU。CPU 可以运行，但耗时会明显增加�
 
 ## 2. 数据准备
 
-本项目当前已包含课程提供的数据：
+运行前请将课程提供的数据放到以下位置：
 
 - `HW-1/nyt.csv`
 - `HW-1/ag.csv`
 
-数据文件不会被 Git 提交。
+数据文件不会被 Git 提交；评分者可使用课程原始数据按上述路径运行，或通过命令行参数指定其他位置。
 
 ### NYT
 
@@ -117,7 +117,7 @@ python run.py --task bert --bert-batch-size 16
 python run.py --task all --glove data/glove.6B.zip --ag-news HW-1/ag.csv
 ```
 
-本项目已提供本地 AG News，建议显式传入 `--ag-news HW-1/ag.csv`，避免重复下载。
+若已按“数据准备”一节放置课程提供的 AG News，建议显式传入 `--ag-news HW-1/ag.csv`，避免重复下载。
 
 ## 4. 已完成的真实实验结果
 
