@@ -1,4 +1,4 @@
-"""Regenerate the two vector bar charts embedded in the LaTeX report.
+"""Regenerate the vector charts used by the experiment report.
 
 The first chart reads the original experiment results.  The second refits the
 two bag-of-words models using the saved split and the same project code.  It
@@ -18,7 +18,7 @@ from report_analysis import fit_bow, load_splits
 
 ROOT = Path(__file__).resolve().parent
 RESULTS = ROOT / "outputs" / "results.json"
-FIGURES = ROOT / "latex 模板" / "figures"
+FIGURES = ROOT / "report" / "figures"
 
 NAVY = Color(0.16, 0.35, 0.54)
 ORANGE = Color(0.81, 0.43, 0.19)

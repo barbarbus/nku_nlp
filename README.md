@@ -15,7 +15,7 @@
 
 ## 提交内容
 
-- 最终实验报告：[2312390_程子晨_第一次实验报告.pdf](output/pdf/2312390_程子晨_第一次实验报告.pdf)
+- 最终实验报告：[2312390_程子晨_第一次实验报告.pdf](report/2312390_程子晨_第一次实验报告.pdf)
 - 完整实验代码：`run.py` 与 `nlp_assignment/`
 - 代码运行说明：本 README
 - 测试与提交前自检：`tests/` 与 `check_assignment.py`
@@ -179,12 +179,10 @@ python check_assignment.py
 
 该命令会检查六种方法、两项指标、统一划分、作业规定参数和最终模型文件是否齐全。
 
-## 8. 实验报告与 LaTeX 编译
+## 8. 实验报告与补充分析
 
-完整报告源文件为 `latex 模板/作业一实验报告.tex`，`latex 模板/main.tex` 是统一编译入口，会载入完整报告；不要再使用旧的空白模板生成 PDF。在 `latex 模板` 目录下运行两次 `xelatex main.tex`，第二次用于更新引用，即可得到 `main.pdf`。需要安装 XeLaTeX，并保留同目录的 `NKU.png`。
-
-当前已编译的交付版本另存于 `output/pdf/2312390_程子晨_第一次实验报告.pdf`。报告里的 GloVe 实验实际使用 Gensim 发布的 `glove-wiki-gigaword-100`，而非 README 上述命令示例中的本地 `glove.6B.zip`；两者都是符合要求的 100 维预训练 GloVe，但复现实验结果时应保持词向量来源一致。
+最终实验报告位于 `report/2312390_程子晨_第一次实验报告.pdf`。报告里的 GloVe 实验实际使用 Gensim 发布的 `glove-wiki-gigaword-100`，而非 README 上述命令示例中的本地 `glove.6B.zip`；两者都是符合要求的 100 维预训练 GloVe，但复现实验结果时应保持词向量来源一致。
 
 报告新增的逐类指标、混淆矩阵、重复正文审计可通过 `python report_analysis.py` 从已保存的划分文件复算。进一步运行 `python analyze_all_methods.py`，会从保存的词向量与 BERT 模型复算六组预测，核对原始 Accuracy 与 Macro-F1，并生成 `outputs/report_diagnostics.json`：其中含六组逐类指标、错误类型、配对 McNemar 检验、共同错误统计和去掉完全重叠测试样本后的敏感性指标。该过程不修改六组原始实验结果；BERT 推断建议使用 CUDA GPU。
 
-若需要重绘报告中的四张图，先运行上述两个分析脚本，再安装 `reportlab` 并在项目根目录运行 `python generate_report_figures.py`。总体指标图、两种词袋逐类柱状图、六组逐类 F1 热力图和错误类型分解图会保存为 `latex 模板/figures/` 下的矢量 PDF；随后在 `latex 模板` 中运行两次 `xelatex main.tex`。绘图脚本会先核对复算的总体指标与原始记录一致。
+若需要重新生成报告中的四张分析图，先运行上述两个分析脚本，再在项目根目录运行 `python generate_report_figures.py`。总体指标图、两种词袋逐类柱状图、六组逐类 F1 热力图和错误类型分解图会保存到 `report/figures/`；绘图脚本会先核对复算的总体指标与原始记录一致。

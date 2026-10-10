@@ -18,8 +18,4 @@ outputs/*
 !outputs/results.json
 !outputs/report_diagnostics.json
 checkpoints/
-latex 模板/*.aux
-latex 模板/*.log
-latex 模板/*.out
-latex 模板/main.pdf
 
